@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Search, PersonOutline } from "@mui/icons-material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { ReactComponent as Shop } from "../assets/store-icon.svg";
@@ -13,10 +13,11 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [showInput, setShowInput] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <StyledNav>
-      <NavFigure>
+      <NavFigure onClick={()=>navigate('/')} >
         <Shop />
         <figcaption>ShopMe</figcaption>
       </NavFigure>

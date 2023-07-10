@@ -3,8 +3,9 @@ import { styled } from "@mui/material";
 export const StyledNav = styled("nav")({
   display: "flex",
   justifyContent: "space-between",
-  marginTop: "3rem",
+  // marginTop: "3rem",
   borderBottom: "1px solid #D8D8D8",
+  alignItems: "center",
 });
 
 export const NavFigure = styled("figure")({
@@ -18,6 +19,7 @@ export const NavFigure = styled("figure")({
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
+  cursor: "pointer",
 
   "& svg": {
     width: "20px",
