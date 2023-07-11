@@ -17,22 +17,35 @@ const Navbar = () => {
 
   return (
     <StyledNav>
-      <NavFigure onClick={()=>navigate('/')} >
+      <NavFigure onClick={() => navigate("/")}>
         <Shop />
         <figcaption>ShopMe</figcaption>
       </NavFigure>
       <LinksContainer>
         <StyledLinks>
           <li>
-            <Link to="#" className="active">
+            <Link
+              to="#"
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
               Shop
             </Link>
           </li>
           <li>
-            <Link to="#">Blog</Link>
+            <Link
+              to="#"
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
+              Blog
+            </Link>
           </li>
           <li>
-            <Link to="#">Our Story</Link>
+            <Link
+              to="#"
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
+              Our Story
+            </Link>
           </li>
         </StyledLinks>
         <StyledIcons>

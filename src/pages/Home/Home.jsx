@@ -1,12 +1,10 @@
 import React from "react";
-
-
+import Landing from "./Landing";
 
 const HomePage = () => {
-
   return (
     <div>
-      HomePage
+      <Landing />
     </div>
   );
 };

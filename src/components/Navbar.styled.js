@@ -1,16 +1,16 @@
 import { styled } from "@mui/material";
 
-export const StyledNav = styled("nav")({
+export const StyledNav = styled("nav")(({theme})=>({
   display: "flex",
   justifyContent: "space-between",
   // marginTop: "3rem",
-  borderBottom: "1px solid #D8D8D8",
+  // borderBottom: `1px solid ${theme.palette.grayColor2}`,
   alignItems: "center",
-});
+}));
 
-export const NavFigure = styled("figure")({
+export const NavFigure = styled("figure")(({theme})=>({
   fontFamily: "'Alex Brush', cursive",
-  backgroundColor: "#000",
+  backgroundColor: "#000" /*theme.palette.primary.main*/,
   color: "white",
   width: "50px",
   height: "50px",
@@ -29,7 +29,7 @@ export const NavFigure = styled("figure")({
   "& figcaption": {
     fontSize: "10px",
   },
-});
+}));
 
 export const LinksContainer = styled("div")({
   display: "flex",
@@ -40,7 +40,7 @@ export const LinksContainer = styled("div")({
   },
 });
 
-export const StyledLinks = styled("ul")({
+export const StyledLinks = styled("ul")(({theme})=>({
   gap: "4rem",
   paddingRight: "3rem",
   position: "relative",
@@ -52,7 +52,7 @@ export const StyledLinks = styled("ul")({
     right: "0",
     width: "1px",
     height: "30%",
-    backgroundColor: "#707070",
+    backgroundColor: theme.palette.grayColor,
   },
 
   "& li": {
@@ -71,7 +71,7 @@ export const StyledLinks = styled("ul")({
   "& a.active": {
     borderBottom: "2px solid #000",
   },
-});
+}));
 
 export const StyledIcons = styled("ul")({
   gap: "3rem",

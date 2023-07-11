@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme";
 
 import "./App.css";
 import { HomePage } from "./pages/Home";
@@ -13,13 +15,15 @@ const router = createBrowserRouter([
   },
 ]);
 
-
 function App() {
   const queryClient = new QueryClient();
   return (
-  <QueryClientProvider client={queryClient}>
-  <RouterProvider router={router} />
-  </QueryClientProvider>)
+    <ThemeProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </ThemeProvider>
+  );
 }
 
 export default App;
