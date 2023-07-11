@@ -1,13 +1,82 @@
 {
-  "product": {
-    "id": 1,
-    "name": "Foo",
-    "price": 123,
-    "tags": ["Bar", "Eek"],
-    "stock": {
-      "warehouse": 300,
-      "retail": 20
+  "products": [
+    {
+      "id": 1,
+      "title": "Lira Earrings",
+      "description": "A pair of earrings made of gold",
+      "price": 20.0,
+      "discountPercentage": 0,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "GUCCI",
+      "category": "earings",
+      "thumbnail": "images/(2).JPG",
+      "images": ["images/(2).JPG"]
     },
-    "image": "images/img01.jpg"
-  }
+    {
+      "id": 2,
+      "title": "Hal Earrings",
+      "description": "A pair of earrings made of gold",
+      "price": 25.0,
+      "discountPercentage": 0,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "GUCCI",
+      "category": "earings",
+      "thumbnail": "images/(4).JPG",
+      "images": ["images/(4).JPG"]
+    },
+    {
+      "id": 3,
+      "title": "Kaede Hair Pin Set Of 3",
+      "description": "Hair pins made of gold",
+      "price": 30.0,
+      "discountPercentage": 0,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "GUCCI",
+      "category": "earings",
+      "thumbnail": "images/(5).JPG",
+      "images": ["images/(5).JPG"]
+    },
+    {
+      "id": 4,
+      "title": "Hair Pin Set Of 3",
+      "description": "A pair of earrings made of gold",
+      "price": 25.0,
+      "discountPercentage": 0,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "GUCCI",
+      "category": "earings",
+      "thumbnail": "images/(6).JPG",
+      "images": ["images/(6).JPG"]
+    },
+    {
+      "id": 5,
+      "title": "Plaine Necklace",
+      "description": "Necklace made of gold",
+      "price": 19.0,
+      "discountPercentage": 0,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "GUCCI",
+      "category": "earings",
+      "thumbnail": "images/(7).JPG",
+      "images": ["images/(7).JPG"]
+    },
+    {
+      "id": 6,
+      "title": "Yuki Hair Pin Set of 3",
+      "description": "Hair pins made of gold",
+      "price": 29.0,
+      "discountPercentage": 0,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "GUCCI",
+      "category": "earings",
+      "thumbnail": "images/(8).JPG",
+      "images": ["images/(8).JPG"]
+    }
+  ]
 }
