@@ -3,10 +3,13 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
+import { useDispatch } from "react-redux";
+import { mobileActions } from "./store/mobile-slice";
 
 import "./App.css";
 import { HomePage } from "./pages/Home";
 import RootLayout from "./layout/Root";
+import { useEffect } from "react";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,16 @@ const router = createBrowserRouter([
 
 function App() {
   const queryClient = new QueryClient();
+  const dispatch = useDispatch();
+
+  const regex =
+    /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  const isMobile = regex.test(navigator.userAgent);
+
+  useEffect(() => {
+    dispatch(mobileActions.setIsMobile(isMobile));
+  }, [isMobile, dispatch]);
+
   return (
     <ThemeProvider theme={theme}>
       <QueryClientProvider client={queryClient}>

@@ -11,6 +11,10 @@ export const StyledFooter = styled("footer")(({ theme }) => ({
   "& ul": {
     display: "flex",
   },
+
+  "@media (max-width: 768px)": {
+    paddingLeft: "1rem",
+  },
 }));
 
 export const FirstDiv = styled("div")(({ theme }) => ({
@@ -29,6 +33,22 @@ export const FirstDiv = styled("div")(({ theme }) => ({
       fontWeight: "400",
       lineHeight: "1.6875rem",
       color: theme.palette.grayColor,
+    },
+  },
+
+  "@media (max-width: 768px)": {
+    flexDirection: "column-reverse",
+    alignItems: "flex-start",
+    gap: "2rem",
+
+    "*": {
+      flexWrap: "wrap",
+    },
+
+    "& ul": {
+      flexDirection: "column",
+      alignItems: "flex-start",
+      gap: "1rem",
     },
   },
 }));
@@ -59,6 +79,12 @@ export const EmailDiv = styled("div")(({ theme }) => ({
       fill: theme.palette.grayColor,
     },
   },
+
+  "@media (max-width: 768px)": {
+    // flexGrow: "1",
+    // flexBasis: "95%",
+    width: "95%",
+  },
 }));
 
 export const SecondDiv = styled("div")(({ theme }) => ({
@@ -86,6 +112,15 @@ export const SecondDiv = styled("div")(({ theme }) => ({
       "& svg": {
         fill: theme.palette.grayColor,
       },
+    },
+  },
+
+  "@media (max-width: 768px)": {
+    flexDirection: "column-reverse",
+    alignItems: "flex-start",
+    gap: "2rem",
+    "*": {
+      flexWrap: "wrap",
     },
   },
 }));

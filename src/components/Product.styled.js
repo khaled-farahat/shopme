@@ -12,6 +12,11 @@ export const ProductDiv = styled("div")(({ theme }) => ({
     fontSize: "1.25rem",
     fontStyle: "normal",
   },
+
+  "@media (max-width: 768px)": {
+    flexBasis: "45%",
+    marginBottom: "2rem",
+  },
 }));
 
 export const ProductFigure = styled("figure")(({ theme }) => ({
@@ -51,6 +56,10 @@ export const ProductFigure = styled("figure")(({ theme }) => ({
       bottom: 0,
     },
   },
+
+  "@media (max-width: 768px)": {
+    height: "10rem",
+  }
 }));
 
 export const ProductName = styled("p")(({ theme }) => ({

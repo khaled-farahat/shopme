@@ -6,6 +6,7 @@ import {
   TextContainer,
 } from "./HomeProducts.styled";
 import { Skeleton } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const SkeletonProduct = () => {
   return (
@@ -48,7 +49,7 @@ const HomeProducts = ({ data, isLoading }) => {
     <ProductsContainer>
       <TextContainer>
         <h1>Shop the Latest</h1>
-        <p>View all</p>
+        <Link to="/shop">View all</Link>
       </TextContainer>
       <ProductsDiv>
         {!isLoading &&

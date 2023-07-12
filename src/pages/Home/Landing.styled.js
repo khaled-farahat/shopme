@@ -39,6 +39,12 @@ export const LandingFigure = styled("figure")(({ theme }) => ({
     objectFit: " cover",
     objectPosition: " 25% 0%",
   },
+
+  "@media (max-width: 768px)": {
+    "& img": {
+      objectPosition: " 80% 0%",
+    },
+  },
 }));
 
 export const TextDiv = styled("div")(({ theme }) => ({
@@ -72,6 +78,17 @@ export const TextDiv = styled("div")(({ theme }) => ({
       color: theme.palette.grayColor2,
       cursor: "pointer",
     },
+  },
+
+  "@media (max-width: 768px)": {
+    justifyContent: "flex-end",
+    paddingBottom: "4rem",
+
+  },
+
+  "@media (max-width: 600px)": {
+    alignItems: "center",
+    paddingLeft: "0",
   },
 }));
 

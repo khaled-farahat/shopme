@@ -10,12 +10,14 @@ import {
   StyledNav,
 } from "./Navbar.styled";
 import { useState } from "react";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const [showInput, setShowInput] = useState(false);
   const navigate = useNavigate();
 
   return (
+    <>
     <StyledNav>
       <NavFigure onClick={() => navigate("/")}>
         <Shop />
@@ -82,6 +84,8 @@ const Navbar = () => {
         </StyledIcons>
       </LinksContainer>
     </StyledNav>
+    <MobileNav />
+    </>
   );
 };
 

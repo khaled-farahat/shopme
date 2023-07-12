@@ -1,14 +1,18 @@
 import { styled } from "@mui/material";
 
-export const StyledNav = styled("nav")(({theme})=>({
+export const StyledNav = styled("nav")(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   // marginTop: "3rem",
   // borderBottom: `1px solid ${theme.palette.grayColor2}`,
   alignItems: "center",
+
+  "@media (max-width: 992px)": {
+    display: "none",
+  },
 }));
 
-export const NavFigure = styled("figure")(({theme})=>({
+export const NavFigure = styled("figure")(({ theme }) => ({
   fontFamily: "'Alex Brush', cursive",
   backgroundColor: "#000" /*theme.palette.primary.main*/,
   color: "white",
@@ -40,7 +44,7 @@ export const LinksContainer = styled("div")({
   },
 });
 
-export const StyledLinks = styled("ul")(({theme})=>({
+export const StyledLinks = styled("ul")(({ theme }) => ({
   gap: "4rem",
   paddingRight: "3rem",
   position: "relative",
@@ -98,13 +102,13 @@ export const StyledIcons = styled("ul")({
   },
 
   "& div.input": {
-    width : "0px",
-    transition: '0.5s',
+    width: "0px",
+    transition: "0.5s",
     overflow: "hidden",
   },
 
   "& div.show.input": {
-    width : "150px",
+    width: "150px",
   },
 
   // create animation width

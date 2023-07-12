@@ -18,7 +18,7 @@ export const TextContainer = styled("div")(({ theme }) => ({
     lineHeight: " 2.6875rem",
   },
 
-  "& p": {
+  "& a": {
     fontSize: "1.25rem",
     fontStyle: "normal",
     fontWeight: "500",
