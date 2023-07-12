@@ -71,7 +71,7 @@ export const TextDiv = styled("div")(({ theme }) => ({
     fontWeight: "700",
     lineHeight: "normal",
     textTransform: "uppercase",
-    transition: "all 0.3s ease-in-out",
+    // transition: "all 0.3s ease-in-out",
 
     "&:hover": {
       backgroundColor: theme.palette.whiteColor,

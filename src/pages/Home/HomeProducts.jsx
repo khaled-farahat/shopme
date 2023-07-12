@@ -58,10 +58,7 @@ const HomeProducts = ({ data, isLoading }) => {
             else
               return (
                 <Product
-                  key={product.id}
-                  image={product.thumbnail}
-                  title={product.title}
-                  price={product.price}
+                  product = {product}
                 />
               );
           })}

@@ -5,6 +5,9 @@ const theme = createTheme({
     grayColor: "#707070",
     grayColor2: "#D8D8D8",
     whiteColor: "#FFFFFF",
+    blackColor:{
+      main: "#000000",
+    } ,
   }
 })
 
