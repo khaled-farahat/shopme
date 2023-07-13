@@ -1,7 +1,8 @@
 import { Menu, Slider, Switch, styled } from "@mui/material";
 
 export const SidebarContainer = styled("div")(({ theme }) => ({
-  flexBasis: "27%",
+  // flexBasis: "27%",
+  width: "100%",
   display: "flex",
   flexDirection: "column",
 

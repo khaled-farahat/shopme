@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
-import { ShopSection } from "./Shop.styled";
+import {
+  AccordionContainer,
+  ShopSection,
+  SidebarContainer,
+} from "./Shop.styled";
 import axios from "axios";
 import { useQuery, useQueryClient } from "react-query";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Typography,
+} from "@mui/material";
+import { ExpandMore } from "@mui/icons-material";
 
 // import { useQuery } from "react-query";
 
@@ -20,7 +31,7 @@ const ShopPage = () => {
   const [category, setCategory] = useState(undefined);
   const [sortBy, setSortBy] = useState(undefined);
   const [value1, setValue1] = useState([0, 100]);
-
+  const [expanded, setExpanded] = useState(false);
 
   // const { data: cachedData } = useQuery("products");
 
@@ -40,12 +51,15 @@ const ShopPage = () => {
     const regex = new RegExp(searchText, "i"); // 'i' flag for case-insensitive search
     let filteredData = data?.data?.filter(
       (product) =>
-        (category ? product.category.toLowerCase() === category.toLowerCase() : true) &&
+        (category
+          ? product.category.toLowerCase() === category.toLowerCase()
+          : true) &&
         (regex.test(product.title) ||
           regex.test(product.description) ||
           regex.test(product.brand) ||
           regex.test(product.category)) &&
-        (product.price >= value1[0] && product.price <= value1[1])
+        product.price >= value1[0] &&
+        product.price <= value1[1]
     );
     if (sortBy) {
       filteredData = filteredData.sort((a, b) => {
@@ -69,19 +83,51 @@ const ShopPage = () => {
 
   return (
     <ShopSection>
-      <Sidebar
-        searchText={searchText}
-        setSearchText={setSearchText}
-        categories={categories}
-        category={category}
-        setCategory={setCategory}
-        sortBy={sortBy}
-        setSortBy={setSortBy}
-        value1={value1}
-        setValue1={setValue1}
-        lowestPrice={0}
-        highestPrice={100}
-      />
+      <SidebarContainer>
+        <Sidebar
+          searchText={searchText}
+          setSearchText={setSearchText}
+          categories={categories}
+          category={category}
+          setCategory={setCategory}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          value1={value1}
+          setValue1={setValue1}
+          lowestPrice={0}
+          highestPrice={100}
+        />
+      </SidebarContainer>
+      <AccordionContainer>
+        <Accordion
+        expanded={expanded}
+        onChange={() => setExpanded(prev => !prev)}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMore />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Filter</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Sidebar
+              searchText={searchText}
+              setSearchText={setSearchText}
+              categories={categories}
+              category={category}
+              setCategory={setCategory}
+              sortBy={sortBy}
+              setSortBy={setSortBy}
+              value1={value1}
+              setValue1={setValue1}
+              lowestPrice={0}
+              highestPrice={100}
+              setExpanded={setExpanded}
+            />
+          </AccordionDetails>
+        </Accordion>
+      </AccordionContainer>
       <Feed data={products} isLoading={isLoading} />
     </ShopSection>
   );

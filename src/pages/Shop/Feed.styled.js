@@ -8,6 +8,11 @@ export const FeedContainer = styled("div")(({ theme }) => ({
   width: "100%",
   // alignItems: "center",
   // justifyContent: "center",
+
+  "@media (max-width: 768px)": {
+    justifyContent: "space-between",
+    gap: "0",
+  },
 }));
 
 export const FeedDiv = styled("div")(({ theme }) => ({

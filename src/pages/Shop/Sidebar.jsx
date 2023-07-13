@@ -30,6 +30,7 @@ const Sidebar = ({
   highestPrice,
   value1,
   setValue1,
+  setExpanded,
 }) => {
   const elementRef1 = React.useRef(null);
   const dropDownWidth1 = elementRef1?.current?.offsetWidth;
@@ -80,7 +81,11 @@ const Sidebar = ({
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <Search />
+          <Search
+            onClick={() => {
+              setExpanded && setExpanded(false);
+            }}
+          />
         </SearchContainer>
         <DropDownContainer onClick={handleClick} ref={elementRef1}>
           <p>Shop By</p>
@@ -112,6 +117,7 @@ const Sidebar = ({
                   } else {
                     setCategory(myCategory);
                   }
+                  setExpanded && setExpanded(false);
                   handleClose();
                 }}
                 className={category === myCategory ? "active" : ""}
@@ -147,6 +153,7 @@ const Sidebar = ({
               } else {
                 setSortBy("price");
               }
+              setExpanded && setExpanded(false);
               handleClose2();
             }}
             className={sortBy === "price" ? "active" : ""}
@@ -160,6 +167,8 @@ const Sidebar = ({
               } else {
                 setSortBy("rating");
               }
+              setExpanded && setExpanded(false);
+
               handleClose2();
             }}
             className={sortBy === "rating" ? "active" : ""}
