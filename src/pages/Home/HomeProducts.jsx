@@ -5,44 +5,10 @@ import {
   ProductsDiv,
   TextContainer,
 } from "./HomeProducts.styled";
-import { Skeleton } from "@mui/material";
 import { Link } from "react-router-dom";
+import SkeletonProduct from "../../components/SkeletonProduct";
 
-const SkeletonProduct = () => {
-  return (
-    <div
-      style={{
-        flexBasis: "30%",
-        marginBottom: "5rem",
-      }}
-    >
-      <Skeleton
-        variant="rounded"
-        sx={{
-          width: "100%",
-          height: "300px",
-        }}
-        animation="wave"
-      />
-      <Skeleton
-        variant="text"
-        sx={{
-          width: "30%",
-          marginTop: "1.5rem",
-          marginBottom: "1rem",
-        }}
-        animation="wave"
-      />
-      <Skeleton
-        variant="text"
-        sx={{
-          width: "20%",
-        }}
-        animation="wave"
-      />
-    </div>
-  );
-};
+
 
 const HomeProducts = ({ data, isLoading }) => {
   return (
@@ -53,11 +19,12 @@ const HomeProducts = ({ data, isLoading }) => {
       </TextContainer>
       <ProductsDiv>
         {!isLoading &&
-          data/*?.products*/.map((product, i) => {
+          data?./*products.*/map((product, i) => {
             if (i > 5) return null;
             else
               return (
                 <Product
+                  key={i}
                   product = {product}
                 />
               );

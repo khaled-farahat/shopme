@@ -6,6 +6,8 @@ export const ProductDiv = styled("div")(({ theme }) => ({
   alignItems: "flex-start",
   flexBasis: "30%",
   marginBottom: "5rem",
+  // flexGrow: 1,
+  // maxWidth: "70%",
 
   "& p": {
     lineHeight: "1.625rem",
@@ -30,6 +32,7 @@ export const ProductFigure = styled("figure")(({ theme }) => ({
     height: "100%",
     objectFit: "cover",
     borderRadius: "0.5rem",
+    cursor: "pointer",
   },
 
   "& figcaption": {
@@ -49,6 +52,9 @@ export const ProductFigure = styled("figure")(({ theme }) => ({
     fontSize: "1rem",
     fontWeight: "700",
     zIndex: 2,
+    "&:hover": {
+      backgroundColor: "rgba(255, 255, 255, 0.70)",
+    },
   },
 
   "&:hover": {
@@ -59,7 +65,7 @@ export const ProductFigure = styled("figure")(({ theme }) => ({
 
   "@media (max-width: 768px)": {
     height: "10rem",
-  }
+  },
 }));
 
 export const ProductName = styled("p")(({ theme }) => ({

@@ -12,13 +12,25 @@ import {
 import { Search, KeyboardArrowDown } from "@mui/icons-material";
 import { MenuItem } from "@mui/material";
 
-function valueText(value) {
-  return `${value}°C`;
-}
+// function valueText(value) {
+//   return `${value}°C`;
+// }
 
 const minDistance = 1;
 
-const Sidebar = () => {
+const Sidebar = ({
+  searchText,
+  setSearchText,
+  categories,
+  category,
+  setCategory,
+  sortBy,
+  setSortBy,
+  lowestPrice,
+  highestPrice,
+  value1,
+  setValue1,
+}) => {
   const elementRef1 = React.useRef(null);
   const dropDownWidth1 = elementRef1?.current?.offsetWidth;
 
@@ -43,7 +55,7 @@ const Sidebar = () => {
     setAnchorEl2(null);
   };
 
-  const [value1, setValue1] = React.useState([20, 37]);
+  // const [value1, setValue1] = React.useState([20, 37]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
@@ -62,7 +74,12 @@ const Sidebar = () => {
       <SidebarContainer>
         <h1>Shop</h1>
         <SearchContainer>
-          <input type="text" placeholder="Search.." />
+          <input
+            type="text"
+            placeholder="Search.."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
           <Search />
         </SearchContainer>
         <DropDownContainer onClick={handleClick} ref={elementRef1}>
@@ -83,8 +100,26 @@ const Sidebar = () => {
             },
           }}
         >
-          <MenuItem onClick={handleClose}>Phones</MenuItem>
-          <MenuItem onClick={handleClose}>Cars</MenuItem>
+          {/* <MenuItem onClick={handleClose}>Phones</MenuItem>
+          <MenuItem onClick={handleClose}>Cars</MenuItem> */}
+          {categories?.map((myCategory, i) => {
+            return (
+              <MenuItem
+                key={i}
+                onClick={(e) => {
+                  if (category === myCategory) {
+                    setCategory(undefined);
+                  } else {
+                    setCategory(myCategory);
+                  }
+                  handleClose();
+                }}
+                className={category === myCategory ? "active" : ""}
+              >
+                {myCategory}
+              </MenuItem>
+            );
+          })}
         </StyledMenu>
 
         <DropDownContainer onClick={handleClick2} ref={elementRef2}>
@@ -105,7 +140,32 @@ const Sidebar = () => {
             },
           }}
         >
-          <MenuItem onClick={handleClose2}>Price</MenuItem>
+          <MenuItem
+            onClick={() => {
+              if (sortBy === "price") {
+                setSortBy(undefined);
+              } else {
+                setSortBy("price");
+              }
+              handleClose2();
+            }}
+            className={sortBy === "price" ? "active" : ""}
+          >
+            Price
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              if (sortBy === "rating") {
+                setSortBy(undefined);
+              } else {
+                setSortBy("rating");
+              }
+              handleClose2();
+            }}
+            className={sortBy === "rating" ? "active" : ""}
+          >
+            rating
+          </MenuItem>
         </StyledMenu>
         <div
           style={{
@@ -118,7 +178,10 @@ const Sidebar = () => {
             value={value1}
             onChange={handleChange1}
             valueLabelDisplay="auto"
-            getAriaValueText={valueText}
+            // getAriaValueText={valueText}
+            min={lowestPrice}
+            max={highestPrice}
+            // step={1}
             disableSwap
           />
           <SliderText>
