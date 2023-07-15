@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import ProductPictures from "./ProductPictures";
 import ProductDetails from "./ProductDetails";
+import ProductInfo from "./ProductInfo";
 
 const fetchProduct = ({ queryKey }) => {
   const productId = queryKey[1];
@@ -27,6 +28,7 @@ const ProductPage = () => {
       <div className="product" style={{
         display: 'flex',
         justifyContent: 'space-between',
+        height: '100vh',
       }}>
         <ProductPictures images = {data?.data?.images}/>
         <ProductDetails
@@ -38,7 +40,9 @@ const ProductPage = () => {
           stock={data?.data?.stock}
         />
       </div>
-      <div className="disc"></div>
+      <ProductInfo
+          description={data?.data?.description}
+      />
       <div className="similar"></div>
     </div>
   );
