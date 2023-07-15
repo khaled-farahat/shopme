@@ -10,8 +10,8 @@
       "stock": 2,
       "brand": "GUCCI",
       "category": "earings",
-      "thumbnail": "images/(2).JPG",
-      "images": ["images/(2).JPG"]
+      "thumbnail": "/images/(2).JPG",
+      "images": ["/images/(2).JPG","/images/(3).JPG","/images/(4).JPG","/images/(5).JPG","/images/(6).JPG"]
     },
     {
       "id": 2,
@@ -23,8 +23,8 @@
       "stock": 3,
       "brand": "GUCCI",
       "category": "earings",
-      "thumbnail": "images/(4).JPG",
-      "images": ["images/(4).JPG"]
+      "thumbnail": "/images/(4).JPG",
+      "images": ["/images/(4).JPG"]
     },
     {
       "id": 3,
@@ -36,8 +36,8 @@
       "stock": 4,
       "brand": "GUCCI",
       "category": "hair jewelry",
-      "thumbnail": "images/(5).JPG",
-      "images": ["images/(5).JPG"]
+      "thumbnail": "/images/(5).JPG",
+      "images": ["/images/(5).JPG"]
     },
     {
       "id": 4,
@@ -49,8 +49,8 @@
       "stock": 9,
       "brand": "GUCCI",
       "category": "hair jewelry",
-      "thumbnail": "images/(6).JPG",
-      "images": ["images/(6).JPG"]
+      "thumbnail": "/images/(6).JPG",
+      "images": ["/images/(6).JPG"]
     },
     {
       "id": 5,
@@ -62,8 +62,8 @@
       "stock": 2,
       "brand": "GUCCI",
       "category": "Necklace",
-      "thumbnail": "images/(7).JPG",
-      "images": ["images/(7).JPG"]
+      "thumbnail": "/images/(7).JPG",
+      "images": ["/images/(7).JPG"]
     },
     {
       "id": 6,
@@ -75,8 +75,8 @@
       "stock": 6,
       "brand": "GUCCI",
       "category": "hair jewelry",
-      "thumbnail": "images/(8).JPG",
-      "images": ["images/(8).JPG"]
+      "thumbnail": "/images/(8).JPG",
+      "images": ["/images/(8).JPG"]
     },
     {
       "id": 7,
@@ -88,8 +88,8 @@
       "stock": 5,
       "brand": "GUCCI",
       "category": "bracelets",
-      "thumbnail": "images/(13).JPG",
-      "images": ["images/(13).JPG"]
+      "thumbnail": "/images/(13).JPG",
+      "images": ["/images/(13).JPG"]
     },
     {
       "id": 8,
@@ -101,8 +101,8 @@
       "stock": 5,
       "brand": "GUCCI",
       "category": "earings",
-      "thumbnail": "images/(14).JPG",
-      "images": ["images/(14).JPG"]
+      "thumbnail": "/images/(14).JPG",
+      "images": ["/images/(14).JPG"]
     },
     {
       "id": 9,
@@ -114,8 +114,8 @@
       "stock": 5,
       "brand": "GUCCI",
       "category": "earings",
-      "thumbnail": "images/(15).JPG",
-      "images": ["images/(15).JPG"]
+      "thumbnail": "/images/(15).JPG",
+      "images": ["/images/(15).JPG"]
     }
   ]
 }

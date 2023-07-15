@@ -18,7 +18,8 @@ const Product = ({ product }) => {
           src={product?.thumbnail}
           alt={product?.title}
           crossOrigin="anonymous"
-          onClick={() => navigate("/products")}
+          onClick={() => navigate("/products/" + product?.id)}
+          loading="lazy"
         />
         <figcaption
           onClick={() => {

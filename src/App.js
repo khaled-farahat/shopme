@@ -9,6 +9,7 @@ import { mobileActions } from "./store/mobile-slice";
 import "./App.css";
 import { HomePage } from "./pages/Home";
 import { ShopPage } from "./pages/Shop";
+import { ProductPage } from "./pages/Product";
 import RootLayout from "./layout/Root";
 import { useEffect } from "react";
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "shop", element: <ShopPage /> },
+      {
+        path: "products/:productId",
+        element: <ProductPage />,
+      },
     ],
   },
 ]);
