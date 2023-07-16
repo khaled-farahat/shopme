@@ -68,9 +68,7 @@ const ProductDetails = ({
       <ProductDescription>
         {description + " "}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-        placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a
-        maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis
-        consequat sed eu felis.
+        placerat, augue a volutpat hendrerit, sapien tortor faucibus augue
       </ProductDescription>
       <AddToCartContainer>
         <QuantityContainer>

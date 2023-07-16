@@ -10,6 +10,7 @@ import "./App.css";
 import { HomePage } from "./pages/Home";
 import { ShopPage } from "./pages/Shop";
 import { ProductPage } from "./pages/Product";
+import { ErrorPage } from "./pages/Error";
 import RootLayout from "./layout/Root";
 import { useEffect } from "react";
 import { ContactUsPage } from "./pages/ContactUs";
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
       { path: "shop", element: <ShopPage /> },
