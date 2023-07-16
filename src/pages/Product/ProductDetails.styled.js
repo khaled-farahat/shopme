@@ -6,6 +6,11 @@ export const MainDiv = styled("div")(({ theme }) => ({
   flexBasis: "37%",
   marginLeft: "2rem",
   height: "37.5rem",
+
+  "@media (max-width: 992px)": {
+    marginLeft: "0",
+  },
+
 }));
 
 export const ProductTitle = styled("h1")(({ theme }) => ({
@@ -35,6 +40,10 @@ export const RatingContainer = styled("div")(({ theme }) => ({
     fontSize: "1rem",
     lineHeight: "1.6875rem",
     color: theme.palette.grayColor,
+  },
+
+  "@media (max-width: 1200px)": {
+    flexDirection: "column",
   },
 }));
 

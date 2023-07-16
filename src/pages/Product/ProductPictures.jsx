@@ -11,9 +11,13 @@ import "swiper/css/scrollbar";
 import { useRef, useState } from "react";
 import {
   ColoredDiv,
+  ColoredDivsContainer,
+  MainSwiperContainer,
   PicturesContainer,
+  ProductMainContainer,
   SwiperMain,
   SwiperThumbs,
+  ThumbsContainer,
 } from "./ProductPictures.styled";
 
 const ProductPictures = ({ images }) => {
@@ -47,22 +51,9 @@ const ProductPictures = ({ images }) => {
 
   return (
     <>
-      <div
-        style={{
-          flexBasis: "62%",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <ProductMainContainer>
         <PicturesContainer>
-          <div
-            style={{
-              display: "flex",
-              width: "8rem",
-              height: "37.5rem",
-              marginRight: "1rem",
-            }}
-          >
+          <ThumbsContainer>
             <SwiperThumbs
               modules={[Navigation, A11y]}
               spaceBetween={40}
@@ -83,15 +74,8 @@ const ProductPictures = ({ images }) => {
                 </SwiperSlide>
               ))}
             </SwiperThumbs>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              // width: "65%",
-              height: "37.5rem",
-            }}
-            ref={mainRef}
-          >
+          </ThumbsContainer>
+          <MainSwiperContainer ref={mainRef}>
             <SwiperMain
               // install Swiper modules
               modules={[Navigation, A11y]}
@@ -110,14 +94,11 @@ const ProductPictures = ({ images }) => {
                 </SwiperSlide>
               ))}
             </SwiperMain>
-          </div>
+          </MainSwiperContainer>
         </PicturesContainer>
-        <div
+        <ColoredDivsContainer
           style={{
-            display: "flex",
             width: divWidth,
-            alignSelf: "flex-end",
-            marginTop: "1rem",
           }}
         >
           {images?.map((image, index) => (
@@ -127,8 +108,8 @@ const ProductPictures = ({ images }) => {
               onClick={() => handleClick(index)}
             />
           ))}
-        </div>
-      </div>
+        </ColoredDivsContainer>
+      </ProductMainContainer>
     </>
   );
 };

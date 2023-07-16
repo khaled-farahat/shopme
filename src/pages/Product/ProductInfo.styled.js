@@ -33,6 +33,16 @@ export const ListContainer = styled("div")(({ theme }) => ({
       },
     },
   },
+
+  "@media (max-width: 600px)": {
+    fontSize: "1rem",
+    lineHeight: "1.375rem",
+    ul: {
+      width: "100%",
+      gap: "0.5rem",
+      justifyContent: "space-between",
+    },
+  },
 }));
 
 export const ProductDescription = styled("p")(({ theme }) => ({
@@ -69,6 +79,11 @@ export const ReviewsContainer = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   position: "relative",
+
+  "@media (max-width: 992px)": {
+    flexDirection: "column",
+    justifyContent: "center",
+  },
 }));
 
 export const ReviewCardContainer = styled("div")(({ theme }) => ({

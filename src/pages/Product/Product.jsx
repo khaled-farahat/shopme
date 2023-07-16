@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import ProductPictures from "./ProductPictures";
 import ProductDetails from "./ProductDetails";
 import ProductInfo from "./ProductInfo";
+import SimilarProduct from "./SimilarProduct";
+import { ProductDetailsContainer } from "./Product.styled";
 
 const fetchProduct = ({ queryKey }) => {
   const productId = queryKey[1];
@@ -19,18 +21,14 @@ const ProductPage = () => {
     fetchProduct
   );
 
-
-
   return (
-    <div style={{
-      marginTop: '5rem',
-    }}>
-      <div className="product" style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        height: '100vh',
-      }}>
-        <ProductPictures images = {data?.data?.images}/>
+    <div
+      style={{
+        marginTop: "5rem",
+      }}
+    >
+      <ProductDetailsContainer>
+        <ProductPictures images={data?.data?.images} />
         <ProductDetails
           title={data?.data?.title}
           price={data?.data?.price}
@@ -39,11 +37,12 @@ const ProductPage = () => {
           rating={data?.data?.rating}
           stock={data?.data?.stock}
         />
-      </div>
-      <ProductInfo
-          description={data?.data?.description}
+      </ProductDetailsContainer>
+      <ProductInfo description={data?.data?.description} />
+      <SimilarProduct
+        category={data?.data?.category}
+        productId={data?.data?.id}
       />
-      <div className="similar"></div>
     </div>
   );
 };
