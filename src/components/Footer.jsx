@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { EmailDiv, FirstDiv, SecondDiv, StyledFooter } from "./Footer.styled";
 import {
   ArrowRightAlt,
@@ -14,7 +15,7 @@ const Footer = () => {
     <StyledFooter>
       <FirstDiv>
         <ul>
-          <li>Contacts</li>
+          <li><Link to='/contact'>Contacts</Link></li>
           <li>terms of services</li>
           <li>shipping and returns</li>
         </ul>

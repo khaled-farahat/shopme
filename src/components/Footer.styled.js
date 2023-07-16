@@ -33,6 +33,10 @@ export const FirstDiv = styled("div")(({ theme }) => ({
       fontWeight: "400",
       lineHeight: "1.6875rem",
       color: theme.palette.grayColor,
+      cursor: "pointer",
+      "& a": {
+        color: theme.palette.grayColor,
+      },
     },
   },
 

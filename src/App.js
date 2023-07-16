@@ -12,6 +12,7 @@ import { ShopPage } from "./pages/Shop";
 import { ProductPage } from "./pages/Product";
 import RootLayout from "./layout/Root";
 import { useEffect } from "react";
+import { ContactUsPage } from "./pages/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "products/:productId",
         element: <ProductPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactUsPage />,
       },
     ],
   },
