@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const BlogsSection = styled.section`
   display: flex;
   flex-direction: column;
+  margin-top: 6rem;
 
   & > h1 {
     font-size: 2.0625rem;
@@ -17,4 +18,8 @@ export const BlogsContainer = styled.section`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;

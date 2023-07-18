@@ -48,5 +48,13 @@ export const CategoryList = styled.ul`
     line-height: 1.6875rem;
     color: ${({ theme }) => theme.palette.grayColor};
     cursor: pointer;
+    transition: 0.3s;
+    padding: 0rem 0.5rem;
+
+    &:hover,
+    &.active {
+      background-color: ${({ theme }) => theme.palette.grayColor};
+      color: #fff;
+    }
   }
 `;

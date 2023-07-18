@@ -2,6 +2,11 @@ import styled from "@emotion/styled";
 
 export const FeedContainer = styled.div`
   flex-basis: 72%;
+  @media (max-width: 768px) {
+    flex-grow: 1;
+    margin-bottom: 4rem;
+  }
+
 `;
 
 export const BlogsContainer = styled.div`
@@ -16,6 +21,10 @@ export const BlogCardContainer = styled.div`
   align-items: flex-start;
   flex-basis: 48%;
   margin-bottom: 4rem;
+  @media (max-width: 992px) {
+
+    flex-basis: 100%;
+  }
 `;
 
 export const BlogCardFigure = styled.figure`
@@ -31,6 +40,7 @@ export const BlogCardFigure = styled.figure`
     object-fit: cover;
     border-radius: 0.5rem;
     transition: 0.3s;
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.1);
