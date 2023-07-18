@@ -12,6 +12,7 @@ import { ShopPage } from "./pages/Shop";
 import { ProductPage } from "./pages/Product";
 import { ErrorPage } from "./pages/Error";
 import { BlogsPage } from "./pages/Blogs";
+import { BlogPage } from "./pages/Blog";
 import RootLayout from "./layout/Root";
 import { useEffect } from "react";
 import { ContactUsPage } from "./pages/ContactUs";
@@ -34,7 +35,14 @@ const router = createBrowserRouter([
       },
       {
         path: "blogs",
-        element: <BlogsPage />,
+
+        children: [
+          { index: true, element: <BlogsPage /> },
+          {
+            path: ":blogId",
+            element: <BlogPage />,
+          },
+        ],
       },
     ],
   },

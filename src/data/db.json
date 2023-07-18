@@ -131,7 +131,24 @@
       "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
       "date": "October 13, 2020",
       "thumbnail": "/images/(19).JPG",
-      "categories": ["fashion", "jewelry"]
+      "categories": ["fashion", "jewelry"],
+      "username": "Khaled",
+      "comments": [
+        {
+          "id": 1,
+          "date": "October 14, 2020",
+          "username": "user1",
+          "comment": "Great article!",
+          "replies": [
+            {
+              "id": 1,
+              "date": "October 15, 2020",
+              "username": "user2",
+              "comment": "I agree!"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 2,
@@ -139,7 +156,24 @@
       "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
       "date": "October 13, 2020",
       "thumbnail": "/images/(20).JPG",
-      "categories": ["fashion", "jewelry"]
+      "categories": ["fashion", "jewelry"],
+      "username": "Khaled",
+      "comments": [
+        {
+          "id": 1,
+          "date": "October 14, 2020",
+          "username": "user1",
+          "comment": "Great article!",
+          "replies": [
+            {
+              "id": 1,
+              "date": "October 15, 2020",
+              "username": "user2",
+              "comment": "I agree!"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 3,
@@ -147,7 +181,24 @@
       "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
       "date": "October 13, 2020",
       "thumbnail": "/images/(21).JPG",
-      "categories": ["fashion", "Necklace"]
+      "categories": ["fashion", "Necklace"],
+      "username": "Khaled",
+      "comments": [
+        {
+          "id": 1,
+          "date": "October 14, 2020",
+          "username": "user1",
+          "comment": "Great article!",
+          "replies": [
+            {
+              "id": 1,
+              "date": "October 15, 2020",
+              "username": "user2",
+              "comment": "I agree!"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 4,
@@ -155,7 +206,24 @@
       "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
       "date": "October 13, 2020",
       "thumbnail": "/images/(22).JPG",
-      "categories": ["fashion", "jewelry"]
+      "categories": ["fashion", "jewelry"],
+      "username": "Khaled",
+      "comments": [
+        {
+          "id": 1,
+          "date": "October 14, 2020",
+          "username": "user1",
+          "comment": "Great article!",
+          "replies": [
+            {
+              "id": 1,
+              "date": "October 15, 2020",
+              "username": "user2",
+              "comment": "I agree!"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

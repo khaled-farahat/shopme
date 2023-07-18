@@ -17,6 +17,7 @@ export const SearchContainer = styled.div`
   & input {
     border: none;
     outline: none;
+    flex-grow: 1;
     &::placeholder {
       font-size: 1rem;
       font-style: normal;

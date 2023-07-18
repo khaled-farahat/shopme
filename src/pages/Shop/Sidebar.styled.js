@@ -25,6 +25,7 @@ export const SearchContainer = styled("div")(({ theme }) => ({
   "& input": {
     outline: "none",
     border: "none",
+    flexGrow: "1",
     "&::placeholder": {
       fontSize: "0.875rem",
       fontStyle: "normal",
