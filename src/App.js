@@ -11,6 +11,7 @@ import { HomePage } from "./pages/Home";
 import { ShopPage } from "./pages/Shop";
 import { ProductPage } from "./pages/Product";
 import { ErrorPage } from "./pages/Error";
+import { BlogsPage } from "./pages/Blogs";
 import RootLayout from "./layout/Root";
 import { useEffect } from "react";
 import { ContactUsPage } from "./pages/ContactUs";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactUsPage />,
+      },
+      {
+        path: "blogs",
+        element: <BlogsPage />,
       },
     ],
   },

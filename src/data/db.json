@@ -11,7 +11,13 @@
       "brand": "GUCCI",
       "category": "earings",
       "thumbnail": "/images/(2).JPG",
-      "images": ["/images/(2).JPG","/images/(3).JPG","/images/(4).JPG","/images/(5).JPG","/images/(6).JPG"]
+      "images": [
+        "/images/(2).JPG",
+        "/images/(3).JPG",
+        "/images/(4).JPG",
+        "/images/(5).JPG",
+        "/images/(6).JPG"
+      ]
     },
     {
       "id": 2,
@@ -116,6 +122,40 @@
       "category": "earings",
       "thumbnail": "/images/(15).JPG",
       "images": ["/images/(15).JPG"]
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "How to choose the right jewelry for your outfit",
+      "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "date": "October 13, 2020",
+      "thumbnail": "/images/(19).JPG",
+      "categories": ["fashion", "jewelry"]
+    },
+    {
+      "id": 2,
+      "title": "Top Trends From Spring ",
+      "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "date": "October 13, 2020",
+      "thumbnail": "/images/(20).JPG",
+      "categories": ["fashion", "jewelry"]
+    },
+    {
+      "id": 3,
+      "title": "Top Trends From Spring",
+      "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "date": "October 13, 2020",
+      "thumbnail": "/images/(21).JPG",
+      "categories": ["fashion", "Necklace"]
+    },
+    {
+      "id": 4,
+      "title": "Christmas Gift Ideas for Her",
+      "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "date": "October 13, 2020",
+      "thumbnail": "/images/(22).JPG",
+      "categories": ["fashion", "jewelry"]
     }
   ]
 }
