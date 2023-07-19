@@ -15,7 +15,9 @@ const Footer = () => {
     <StyledFooter>
       <FirstDiv>
         <ul>
-          <li><Link to='/contact'>Contacts</Link></li>
+          <li>
+            <Link to="/contact">Contacts</Link>
+          </li>
           <li>terms of services</li>
           <li>shipping and returns</li>
         </ul>
@@ -28,7 +30,10 @@ const Footer = () => {
       </FirstDiv>
       <SecondDiv>
         <p>
-        © {currentYear} ShopME. <span>Terms of use</span> and <span>privacy policy.</span>
+          © {currentYear} ShopME. <span>Terms of use</span> and{" "}
+          <span>
+            <Link to="/privacy-policy">privacy policy.</Link>
+          </span>
         </p>
         <ul>
           <li>

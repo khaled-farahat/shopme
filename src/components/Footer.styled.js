@@ -102,7 +102,7 @@ export const SecondDiv = styled("div")(({ theme }) => ({
     fontStyle: "normal",
     fontWeight: "400",
     lineHeight: "1.6875rem",
-    "& span": {
+    "& span, & a": {
       color: theme.palette.grayColor,
     },
   },
