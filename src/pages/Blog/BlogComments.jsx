@@ -36,10 +36,12 @@ const BlogComment = ({ comment, type }) => {
               <h5>{comment?.username}</h5>
               <span>{comment?.date}</span>
             </UsernameInnerContainer>
-            <ReplyContainer>
-              <Reply onClick={handleShowReply} />
-              <span onClick={handleShowReply}>Reply</span>
-            </ReplyContainer>
+            {type === "comment" && (
+              <ReplyContainer>
+                <Reply onClick={handleShowReply} />
+                <span onClick={handleShowReply}>Reply</span>
+              </ReplyContainer>
+            )}
           </UsernameContainer>
           <CommentText>{comment?.comment}</CommentText>
         </CommentInnerContainer>

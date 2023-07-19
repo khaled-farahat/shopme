@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
@@ -20,6 +20,10 @@ const ProductPage = () => {
     ["product", productId],
     fetchProduct
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [window.location.pathname]);
 
   return (
     <div
