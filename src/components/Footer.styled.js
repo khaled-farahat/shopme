@@ -69,6 +69,7 @@ export const EmailDiv = styled("div")(({ theme }) => ({
     border: "none",
     outline: "none",
     flexBasis: "70%",
+    flexGrow: "1",
     "&::placeholder": {
       fontSize: "1rem",
       fontStyle: "normal",
