@@ -50,10 +50,10 @@ const MobileNav = ({isMobile}) => {
               <Link to="#">Account</Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <Link to="#">Shop</Link>
+              <Link to="/shop">Shop</Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <Link to="#">Blog</Link>
+              <Link to="/blogs">Blog</Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <Link to="#">Our Story</Link>

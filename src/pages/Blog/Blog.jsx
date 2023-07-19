@@ -25,10 +25,11 @@ const BlogPage = () => {
       <div style={{
         width: "42rem",
         marginBottom: "4rem",
+        maxWidth: "100%",
       }}>
         <CommentForm />
       </div>
-      <BlogComments />
+      <BlogComments comments = {data?.data?.comments} />
     </BlogSection>
   );
 };

@@ -6,6 +6,7 @@ export const MainContentContainer = styled("div")(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   textAlign: "center",
+  maxWidth: "100%",
 }));
 
 export const BlogTitle = styled("h1")(({ theme }) => ({
@@ -58,7 +59,7 @@ export const InnerContentContainer = styled("div")(({ theme }) => ({
   width: "42rem",
   marginBottom: "3.5rem",
   borderBottom: `1px solid ${theme.palette.grayColor2}`,
-
+  maxWidth: "100%",
 }));
 
 export const BlogContent = styled("p")(({ theme }) => ({
@@ -123,6 +124,9 @@ export const TagDiv = styled("div")(({ theme }) => ({
   justifyContent: "space-between",
   alignItems: "center",
   marginBottom: "3rem",
+  "@media (max-width: 768px)": {
+    flexDirection: "column",
+  },
 }));
 
 export const TagPara = styled("div")(({ theme }) => ({

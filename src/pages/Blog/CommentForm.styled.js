@@ -5,6 +5,7 @@ export const StyledForm = styled("form")(({ theme }) => ({
   flexDirection: "column",
   width: "100%",
   alignItems: "flex-start",
+  marginBottom: "2rem",
 }));
 
 export const FormTitle = styled("h1")(({ theme }) => ({

@@ -6,13 +6,15 @@ import {
   CommentFigure,
   CommentInnerContainer,
   CommentText,
+  RepliesContainer,
   ReplyContainer,
+  ReplyDiv,
   UsernameContainer,
   UsernameInnerContainer,
 } from "./BlogComments.styled";
 import CommentForm from "./CommentForm";
 
-const BlogComment = () => {
+const BlogComment = ({ comment, type }) => {
   const [viewForm, setViewForm] = useState(false);
 
   const handleShowReply = () => {
@@ -31,18 +33,15 @@ const BlogComment = () => {
         <CommentInnerContainer>
           <UsernameContainer>
             <UsernameInnerContainer>
-              <h5>John Doe</h5>
-              <span>2 days ago</span>
+              <h5>{comment?.username}</h5>
+              <span>{comment?.date}</span>
             </UsernameInnerContainer>
             <ReplyContainer>
               <Reply onClick={handleShowReply} />
               <span onClick={handleShowReply}>Reply</span>
             </ReplyContainer>
           </UsernameContainer>
-          <CommentText>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet.
-          </CommentText>
+          <CommentText>{comment?.comment}</CommentText>
         </CommentInnerContainer>
       </CommentContainer>
       {viewForm && <CommentForm />}
@@ -50,10 +49,28 @@ const BlogComment = () => {
   );
 };
 
-const BlogComments = () => {
+const BlogComments = ({ comments }) => {
   return (
     <BlogCommentsContainer>
-      <BlogComment />
+      {/* <BlogComment /> */}
+      {comments?.length &&
+        comments?.map((comment, i) => {
+          return (
+            <div key={i}>
+              <BlogComment comment={comment} type="comment" />
+              <RepliesContainer>
+                {comment?.replies?.length &&
+                  comment?.replies?.map((reply, i) => {
+                    return (
+                      <ReplyDiv key={i}>
+                        <BlogComment comment={reply} type="reply" />
+                      </ReplyDiv>
+                    );
+                  })}
+              </RepliesContainer>
+            </div>
+          );
+        })}
     </BlogCommentsContainer>
   );
 };

@@ -4,6 +4,7 @@ export const BlogCommentsContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   width: "42rem",
+  maxWidth: "100%",
 }));
 
 export const CommentContainer = styled("div")(({ theme }) => ({
@@ -24,6 +25,8 @@ export const CommentFigure = styled("figure")(({ theme }) => ({
 export const CommentInnerContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
+  // width: "100%",
+  flexGrow: 1,
 }));
 
 export const UsernameContainer = styled("div")(({ theme }) => ({
@@ -81,4 +84,16 @@ export const CommentText = styled("p")(({ theme }) => ({
   color: theme.palette.grayColor,
   // alignSelf: "flex-start",
   textAlign: "left",
+}));
+
+export const RepliesContainer = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  // justifyContent: "flex-end",
+}));
+
+export const ReplyDiv = styled("div")(({ theme }) => ({
+  width: "90%",
+  alignSelf: "flex-end",
 }));
