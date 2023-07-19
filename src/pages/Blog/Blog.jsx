@@ -27,7 +27,7 @@ const BlogPage = () => {
         marginBottom: "4rem",
         maxWidth: "100%",
       }}>
-        <CommentForm />
+        <CommentForm type="comment"/>
       </div>
       <BlogComments comments = {data?.data?.comments} />
     </BlogSection>

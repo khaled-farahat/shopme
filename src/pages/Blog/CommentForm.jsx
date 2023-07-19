@@ -13,7 +13,7 @@ import { Checkbox } from "@mui/material";
 const CommentForm = ({ type }) => {
   return (
     <StyledForm>
-      <FormTitle>Leave a reply</FormTitle>
+      <FormTitle>Leave a {type && type}</FormTitle>
       <FormNote>
         Your email address will not be published. Required fields are marked *
       </FormNote>

@@ -46,7 +46,9 @@ const BlogComment = ({ comment, type }) => {
           <CommentText>{comment?.comment}</CommentText>
         </CommentInnerContainer>
       </CommentContainer>
-      {viewForm && <CommentForm />}
+      {viewForm && (
+        <CommentForm type={type === "comment" ? "reply" : undefined} />
+      )}
     </>
   );
 };
