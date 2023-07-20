@@ -45,7 +45,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/story"
+                to="/about"
                 className={({ isActive }) => (isActive ? "active" : undefined)}
                 end
               >
