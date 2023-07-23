@@ -17,6 +17,7 @@
 
 - [📝 Table of Contents](#-table-of-contents)
 - [📙 About ](#-about-)
+- [🎨 Ui Design ](#-ui-design-)
 - [🌠 Features ](#-features-)
 - [📂 Folder Structure ](#-folder-structure-)
 - [🏁 Getting Started ](#-getting-started-)
@@ -32,6 +33,9 @@
 ## 📙 About <a name = "about"></a>
 
 An e-commerce website with a simple user interface that allows users to browse products, add them to their cart, and checkout.
+
+## 🎨 Ui Design <a name = "ui"></a>
+[Link to Figma file](https://www.figma.com/community/file/1098200889975518550/Shoppe)
 
 ## 🌠 Features <a name= "features"></a>
 
