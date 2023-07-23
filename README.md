@@ -50,22 +50,23 @@ An e-commerce website with a simple user interface that allows users to browse p
 ## 📂 Folder Structure <a name= "folder-structure"></a>
 
 ```sh
-├───Assets
+├───assets
 │   └───images
-├───Components
+├───components
 │   ├───Footer
 │   ├───Navbar
 │   └───Product
 ├───data
-├───Hooks
-├───Layouts
+│   └───db.json
+├───hooks
+├───layouts
 │   └───RootLayout
-├───Pages
+├───pages
 │   ├───Blog
 │   ├───Product
 │   └───Home
-├───Store
-└───Utils
+├───store
+└───utils
 ```
 
 ## 🏁 Getting Started <a name = "get-started"></a>
