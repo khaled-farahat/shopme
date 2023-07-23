@@ -122,6 +122,9 @@ npm run serve-json
 - **Redux Toolkit**
 - **React Router**
 - **React Query**
+- **JSON Server**
+- **Axios**
+- **SwiperJs**
 
 ## 📸 Demo video <a name = "video"></a>
 
@@ -149,4 +152,4 @@ npm run serve-json
 
 ## 📃 License <a name = "license"></a>
 
-> This software is licensed under MIT License, See [License](https://github.com/khaled-farahat/shopme/blob/main/LICENSE) for more information ©khaled-farahat.
+> This software is licensed under MIT License, See [License](https://github.com/khaled-farahat/shopme/LICENSE) for more information ©khaled-farahat.
