@@ -152,4 +152,4 @@ npm run serve-json
 
 ## 📃 License <a name = "license"></a>
 
-> This software is licensed under MIT License, See [License](https://github.com/khaled-farahat/shopme/blob/main/LICENSE) for more information ©khaled-farahat.
+> This software is licensed under MIT License, See [License](https://github.com/khaled-farahat/shopme/blob/master/LICENSE) for more information ©khaled-farahat.
