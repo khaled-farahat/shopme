@@ -75,7 +75,7 @@ const Navbar = () => {
               }
             </li>
             <li>
-              <Link to="#">
+              <Link to="/profile">
                 <PersonOutline />
               </Link>
             </li>

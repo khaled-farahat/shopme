@@ -15,6 +15,7 @@ import { BlogsPage } from "./pages/Blogs";
 import { BlogPage } from "./pages/Blog";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicy";
 import { AboutPage } from "./pages/About";
+import { ProfilePage } from "./pages/Profile";
 import RootLayout from "./layout/Root";
 import { useEffect } from "react";
 import { ContactUsPage } from "./pages/ContactUs";
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <AboutPage />,
+      },
+      {
+        path: "profile",
+        element: <ProfilePage />,
       },
     ],
   },

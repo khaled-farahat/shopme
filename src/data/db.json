@@ -225,5 +225,13 @@
         }
       ]
     }
+  ],
+  "users":[
+    {
+      "id": 1,
+      "username": "Khaled",
+      "password": "123456",
+      "email": ""
+    }
   ]
 }

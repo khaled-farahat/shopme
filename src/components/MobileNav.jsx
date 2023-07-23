@@ -47,7 +47,7 @@ const MobileNav = ({isMobile}) => {
             onClose={handleClose}
           >
             <MenuItem onClick={handleClose}>
-              <Link to="#">Account</Link>
+              <Link to="/profile">Account</Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <Link to="/shop">Shop</Link>
@@ -56,7 +56,7 @@ const MobileNav = ({isMobile}) => {
               <Link to="/blogs">Blog</Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <Link to="#">Our Story</Link>
+              <Link to="/about">Our Story</Link>
             </MenuItem>
           </MenuList>
         </IconsDiv>
