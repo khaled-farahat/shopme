@@ -24,29 +24,24 @@
   - [Installation ](#installation-)
   - [Running ](#running-)
 - [💻 Built Using ](#-built-using-)
-- [📸 Demo Screens ](#-demo-screens-)
+- [📸 Demo video ](#-demo-video-)
 - [🕴 Contributors ](#-contributors-)
 - [⏳ Backlog](#-backlog)
 - [📃 License ](#-license-)
 
 ## 📙 About <a name = "about"></a>
 
-A to do List application that allows users to create and manage their tasks. It provides a simple and intuitive interface for users to add, edit, delete, and complete tasks.
+An e-commerce website with a simple user interface that allows users to browse products, add them to their cart, and checkout.
 
 ## 🌠 Features <a name= "features"></a>
 
-1. Ability to add new tasks.
-2. Ability to view tasks based on different categories, **_such as_**
-   - Today's Tasks
-   - All Tasks
-   - Important Tasks
-   - Completed Tasks
-   - Uncompleted Tasks
-3. Ability to mark tasks as **completed** or **uncompleted**.
-4. Ability to edit and delete tasks.
-5. Ability to search for tasks using a search bar.
-6. Responsive design that works well on desktop and mobile devices.
-7. Integration with local storage to persist data between sessions.
+1. browse products
+2. view product details
+3. add products to cart
+4. see cart items
+5. see new blogs
+6. login and register
+7. update profile
 
 📌 NOTE:
 
@@ -58,20 +53,18 @@ A to do List application that allows users to create and manage their tasks. It 
 ├───Assets
 │   └───images
 ├───Components
-│   ├───CardTask
-│   ├───DeleteTaskModal
-│   ├───LeftSideBar
-│   ├───RightSideBar
-│   ├───SearchBar
-│   ├───TaskModal
-│   └───ToastModal
+│   ├───Footer
+│   ├───Navbar
+│   └───Product
+├───data
 ├───Hooks
 ├───Layouts
-│   ├───Header
-│   └───ShowTasks
+│   └───RootLayout
 ├───Pages
-│   └───HomePage
-├───Theme
+│   ├───Blog
+│   ├───Product
+│   └───Home
+├───Store
 └───Utils
 ```
 
@@ -92,10 +85,10 @@ A to do List application that allows users to create and manage their tasks. It 
 $ git clone https://github.com/khaled-farahat/shopme.git
 ```
 
-2. **_Navigate to TodoList Folder_**
+2. **_Navigate to shopme Folder_**
 
 ```sh
-$ cd TodoList
+$ cd shopme
 ```
 
 ### Running <a name = "running"></a>
@@ -114,12 +107,22 @@ npm install
 npm start
 ```
 
+3. **_Start backend_**
+
+```sh
+npm run serve-json
+```
+
 ## 💻 Built Using <a name = "tech"></a>
 
 - **ReactJs**
-- **React Bootstrap**
+- **Material UI**
+- **Redux**
+- **Redux Toolkit**
+- **React Router**
+- **React Query**
 
-## 📸 Demo Screens <a name = "screens"></a>
+## 📸 Demo video <a name = "video"></a>
 
 <div align="center">
 <img src="/screenshots/ShopME.gif">
@@ -131,14 +134,17 @@ npm start
   <tr>
    <td align="center"><a href="https://github.com/khaled-farahat"><img src="https://avatars.githubusercontent.com/u/84389471?v=4" width="150px;" alt=""/><br /><sub><b>khaled Farahat</b></sub></a><br /></td>
 
-
   </tr>
  </table>
 
 ## ⏳ Backlog
 
-- [x] ~~Add a feature to categorize tasks, allowing users to filter tasks by category.~~
-- [ ] Allow users to drag and drop tasks to rearrange their order or move them between categories.
+- [ ] Add Cart UI
+- [ ] Add Cart State and Logic
+- [ ] Add Checkout UI
+- [ ] Add Profile logic
+- [ ] Add Authentication and Authorization
+- [ ] Make Node Backend instead of JSON Server
 
 ## 📃 License <a name = "license"></a>
 
