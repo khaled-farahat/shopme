@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ProfileTable from "./ProfileTable";
 
 const Downloads = () => {
   return (
-    <div>Downloads</div>
-  )
-}
+    <div>
+      <ProfileTable />
+    </div>
+  );
+};
 
-export default Downloads
+export default Downloads;

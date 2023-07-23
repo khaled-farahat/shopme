@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AddressBtn,
   AddressInput,
@@ -11,8 +11,12 @@ import {
 } from "./Addresses.styled";
 
 const AddressForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div
         style={{
           display: "flex",
@@ -47,6 +51,9 @@ const AddressForm = () => {
 };
 
 const Addresses = () => {
+  const [viewForm1, setViewForm1] = useState(false);
+  const [viewForm2, setViewForm2] = useState(false);
+
   return (
     <AddressesMainContainer>
       <p>
@@ -55,14 +62,18 @@ const Addresses = () => {
       <AddressesContainer>
         <AddressesSecContainer>
           <StyledHeader>Billing address</StyledHeader>
-          <StyledBtn>Add</StyledBtn>
-          {false && <AddressForm />}
+          <StyledBtn onClick={() => setViewForm1((prev) => !prev)}>
+            Add
+          </StyledBtn>
+          {viewForm1 && <AddressForm />}
           <StyledPara>You have not set up this type of address yet.</StyledPara>
         </AddressesSecContainer>
         <AddressesSecContainer>
           <StyledHeader>Shipping address</StyledHeader>
-          <StyledBtn>Add</StyledBtn>
-          {true && <AddressForm />}
+          <StyledBtn onClick={() => setViewForm2((prev) => !prev)}>
+            Add
+          </StyledBtn>
+          {viewForm2 && <AddressForm />}
           <StyledPara>You have not set up this type of address yet.</StyledPara>
         </AddressesSecContainer>
       </AddressesContainer>
